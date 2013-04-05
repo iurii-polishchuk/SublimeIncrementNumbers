@@ -1,12 +1,4 @@
 [
-	{ "keys": ["ctrl+a"], "command": "set_action_motion", "args": {
-		"action": "vi_increment_number",
-		"motion": null },
-		"context": [{"key": "setting.command_mode"}]
-	},
-	{ "keys": ["ctrl+x"], "command": "set_action_motion", "args": {
-		"action": "vi_decrement_number",
-		"motion": null },
-		"context": [{"key": "setting.command_mode"}]
-	}
+	{ "keys": ["ctrl+alt+shift+up"], "command": "vi_increment_number" },
+	{ "keys": ["ctrl+alt+shift+down"], "command": "vi_decrement_number" }
 ]
