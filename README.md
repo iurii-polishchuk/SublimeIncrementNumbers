@@ -5,8 +5,8 @@ It works with caret at any position of a number.
 
 ## Usage
 
- * Use `ctrl+alt+shift+up` to go increment number
- * Use `ctrl+alt+shift+down` to go decrement number
+ * Use `ctrl+alt+shift+up` to increment number
+ * Use `ctrl+alt+shift+down` to decrement number
 
 ## Installation
 
