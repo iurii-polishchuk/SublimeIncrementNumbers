@@ -1,6 +1,7 @@
 """
-Vintage Numbers plugin for Sublime Text 2
-by Ignacy Sokolowski
+Increment Numbers plugin for Sublime Text 2
+By Jonathan Nicol @f6design
+Based almost entirely on Vintage Numbers plugin by Ignacy Sokolowski
 """
 import re
 import sublime
@@ -10,7 +11,7 @@ import sublime_plugin
 NUMBER_RE = re.compile(r'(-?0[0-7]+)|(-?0[xX][\da-fA-F]+)|(-?0b[01]+)|(-?\d+)')
 
 
-class ViNumberMixin(object):
+class NumberMixin(object):
     """Mixin for Sublime Text 2 TextCommands that enables incrementing
     and decrementing number at the caret position in Vintage command mode.
     It works with caret at any position of a number.
@@ -89,7 +90,7 @@ class ViNumberMixin(object):
                 self.view.sel().add(s)
 
 
-class ViIncrementNumberCommand(sublime_plugin.TextCommand, ViNumberMixin):
+class IncrementNumberCommand(sublime_plugin.TextCommand, NumberMixin):
     """Sublime Text 2 TextCommand to increment number at the caret position
     in Vintage command mode.
     It works with caret at any position of a number.
@@ -100,10 +101,10 @@ class ViIncrementNumberCommand(sublime_plugin.TextCommand, ViNumberMixin):
     int_method = '__add__'
 
     def run(self, edit):
-        ViNumberMixin.run(self, edit)
+        NumberMixin.run(self, edit)
 
 
-class ViDecrementNumberCommand(sublime_plugin.TextCommand, ViNumberMixin):
+class DecrementNumberCommand(sublime_plugin.TextCommand, NumberMixin):
     """Sublime Text 2 TextCommand to decrement number at the caret position
     in Vintage command mode.
     It works with caret at any position of a number.
@@ -114,4 +115,4 @@ class ViDecrementNumberCommand(sublime_plugin.TextCommand, ViNumberMixin):
     int_method = '__sub__'
 
     def run(self, edit):
-        ViNumberMixin.run(self, edit)
+        NumberMixin.run(self, edit)

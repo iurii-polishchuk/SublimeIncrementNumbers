@@ -1,4 +1,4 @@
 [
-	{ "keys": ["ctrl+alt+shift+up"], "command": "vi_increment_number" },
-	{ "keys": ["ctrl+alt+shift+down"], "command": "vi_decrement_number" }
+	{ "keys": ["ctrl+alt+shift+up"], "command": "increment_number" },
+	{ "keys": ["ctrl+alt+shift+down"], "command": "decrement_number" }
 ]
